@@ -1,0 +1,350 @@
+
+@import "_variables";
+@font-face {
+	font-family: 'Matura MT Script Capitals';
+	src: url(../fuente/MATURASC.ttf);
+	font-weight: bold;
+	font-style: bold;
+}
+
+nav {
+	background-color: $background-color_1;
+	font-family: $fuentePrincipal;
+	a{
+		font-family: $fuentePrincipal;
+	}
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: $fuenteSecundaria;
+}
+header {
+	height: 315px;
+	background-image: url("../img/portadaelden.jpg");
+	background-size: cover;
+	display: grid;
+	text-align: center;
+	h1 {
+		padding: 60px;
+		font-size: 40pt;
+		font-family: $fuentePrincipal;
+		color: $color_1;
+		text-shadow: 2px 3px $background-color_4;
+	}
+	p {
+		padding-top: 5%;
+		font-family: $fuentePrincipal;
+		color: $color_1;
+	}
+	.lead {
+		font-size: 30pt;
+		text-shadow: 2px 3px $background-color_4;
+	}
+}
+.animate__animated {
+	--animate-duration: 3s;
+}
+body {
+	background-image: url("../img/fondo.jpg");
+	background-size: cover;
+	display: grid;
+}
+main {
+	nav {
+		font-family: $fuentePrincipal;
+		color: $color_1;
+	}
+	box-sizing: border-box;
+	h2 {
+		margin: 15px;
+		text-align: center;
+		color: $color_2;
+		font-size:xx-large;
+		font-family: $fuentePrincipal;
+	}
+	h3 {
+		margin: 15px;
+		text-align: center;
+		font-style: italic;
+		color: $color_1;
+		font-family: $fuentePrincipal;
+	}
+	p {
+		margin: 15px;
+		color: $color_2;
+		font-weight: 200;
+	}
+}
+
+.inicio-titulo {
+	overflow: hide;
+	padding: 0px;
+	margin: 0px;
+}
+.inicioBox {
+	background-color: $background-color_2;
+	overflow: hide;
+	padding: 15px;
+	margin: 50px;
+	border: 3px solid rgb(153, 44, 11);
+	p {
+		color: $color_2;
+	}
+}
+h2 {
+	color: $color_1;
+}
+.sub-menu-horizontal {
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: $background-color_3;
+	}
+	li {
+		display: block;
+		float: left;
+		border-right: 3px solid #5f5e03;
+		&:last-child {
+			border-right: none;
+		}
+		a {
+			display: block;
+			color: $color_3;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-family: $fuentePrincipal;
+			font-size: 25px;
+			&:hover {
+				background-color: $background-color_4;
+			}
+		}
+	}
+	a.active {
+		background-color: $background-color_5;
+		color: $color_4;
+	}
+}
+.sub-menu {
+	margin-left: 2%;
+	margin-right: 2%;
+	display: block;
+	color: $color_3;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-family: $fuentePrincipal;
+	font-size: 20px;
+	li {
+		a {
+			display: block;
+			color: $color_3;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-family: $fuentePrincipal;
+			font-size: 25px;
+			&:hover {
+				background-color: $background-color_4;
+			}
+		}
+	}
+}
+footer {
+	background-color: $background-color_3;
+	background-image: none;
+	position: relative;
+	bottom: 0pt;
+	width: 100%;
+}
+.plataformas {
+	column-gap: normal;
+	ul {
+		list-style-type: none;
+		margin: 50;
+		padding: 50;
+		overflow: hidden;
+		background-color: $background-color_3;
+	}
+	li {
+		display: inline;
+		float: left;
+		a {
+			display: block;
+			color: $color_5;
+			text-align: center;
+			padding: 12px 10px;
+			text-decoration: none;
+			line-height: 100px;
+			img {
+				width: 50px;
+			}
+		}
+	}
+}
+
+
+%ajusteBox{
+	padding: 10px;
+	margin: 25px;
+	border: 3px solid rgb(0, 0, 0);
+}
+
+.introBox {
+	background-color: $background-color_6;
+	/* overflow: hide; */
+	display: inline-block;
+	vertical-align: top;
+	@extend %ajusteBox;
+
+	
+}
+
+.personajeSection {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	justify-items: center;
+	align-items: center;
+	justify-content: center;
+	margin: 50px;
+}
+.personajeBox {
+	@extend %ajusteBox;
+	background-color: $background-color_6;
+	overflow: hide;
+	display: inline-block;
+	vertical-align: top;
+
+	img {
+		width: 250px;
+		height: 300px;
+		float: left;
+		margin: 15px;
+		border: 1px solid rgb(0, 0, 0);
+	}
+	h4 {
+		padding: 15px;
+	}
+}
+.personajeText {
+	display: block;
+}
+
+.historiaBox {
+	background-color: $background-color_2;
+	overflow: hide;
+	padding: 15px;
+	border: 1px solid rgb(0, 0, 0);
+	align-items: center;
+	align-content: center;
+	margin-bottom: 20%;
+	img {
+		
+		margin-left: auto;
+		margin-right: auto;
+		align-content: center;
+	}
+	p {
+		text-align: left;
+	}
+}
+.historiaImagen{
+		width: 100%;
+	
+}
+
+
+.guiaBox {
+	background-color: $background-color_6;
+	overflow: hide;
+	display: block;
+	@extend %ajusteBox;
+}
+.guiaBox p{
+	color:#432183
+}
+.guiaVideosSection {
+	display: grid;
+	grid-template-columns: repeat(1fr, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	margin: 50px;
+}
+.fondoOscuro {
+	  background-color: rgba(0, 0, 0, 0.2); 	
+}
+
+@media (min-width: 0px) and (max-width: 576px) {
+	header {
+		h1 {
+			padding: 60px;
+			font-size: 40pt;
+			font-family: $fuentePrincipal;
+			color: $color_1;
+		}
+		p {
+			padding-top: 5%;
+			font-family: $fuentePrincipal;
+			color: $color_1;
+		}
+	}
+	.personajeSection {
+		grid-template-rows: 1fr 1fr 1fr;
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.personajeBox{
+		h2 p  {
+		
+		}
+	}
+	.historiaBox {
+		margin-right: 15px;
+		margin-left: 15px;
+		margin: auto;
+		p {
+			text-align: center;
+		}
+	}
+	.historiaImagen{
+			width: 100%;
+		
+	}
+	.container {
+		text-align: center;
+	}
+	footer {
+		text-align: left;
+	}
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+	header {
+		h1 {
+			padding: 60px;
+			font-size: 40pt;
+			font-family: $fuentePrincipal;
+			color: $color_1;
+		}
+		p {
+			padding-top: 5%;
+			font-family: $fuentePrincipal;
+			color: $color_1;
+		}
+	}
+
+	.personajeSection {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+    }
+	.container {
+		text-align: center;
+	}
+    footer {
+        text-align: left;
+    }
+}
+
